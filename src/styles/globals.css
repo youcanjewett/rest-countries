@@ -1,0 +1,52 @@
+:root {
+    --bg-color: hsl(0, 0%, 98%);
+    --header-color: hsl(0, 0%, 100%);
+    --input-color: hsl(0, 0%, 52%);
+    --h1-color: hsl(200, 15%, 8%);
+    --text-color: hsl(200, 15%, 8%);
+    --elements-color: hsl(0, 0%, 100%);
+    --box-shadow: hsl(200, 15%, 20%);
+
+}
+
+[data-theme="dark"] {
+    --bg-color: hsl(207, 26%, 17%);
+    --header-color: hsl(209, 23%, 22%);
+    --input-color: hsl(0, 0%, 100%);
+    --h1-color: hsl(0, 0%, 75%);
+    --text-color: hsl(0, 0%, 100%);
+    --elements-color:  hsl(209, 23%, 22%);
+    --box-shadow: transparent;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    font-family: 'Nunito Sans', sans-serif;
+    color: var(--text-color)
+}
+
+body {
+    font-size: 0.875rem;
+}
+
+h1 {
+    font-size: 1.5rem;
+    font-weight: 800;
+    color: var(--h1-color)
+}
+
+h2 {
+    font-size: 1.125rem;
+    font-weight: 800;
+}
+
+@media (max-width: 375px) {
+    h1 {
+        font-size: 0.875rem;
+    }
+}
