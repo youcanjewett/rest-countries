@@ -38,10 +38,11 @@
     background: url("./../../public/icon-sun.svg") no-repeat;
 }
 
-
-@media (max-width: 375px) {
+/* mobile styles */
+@media (max-width: 400px) {
     .header {
         padding: 1.875rem 1rem;
+        box-shadow: 0 0 5px -2px var(--box-shadow);
     }
 
     .theme-label {

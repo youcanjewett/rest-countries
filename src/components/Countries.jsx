@@ -6,15 +6,15 @@ import './../styles/countries.css';
 const Countries = () => {
     return (
         <main className="main-container">
-            <div className="filter-container">
+            <section className="filter-container">
                 <SearchBar />
                 <Filter />
-            </div>
+            </section>
 
 
-            <div>
+            <section>
                 Eventually there will be a bunch of countries listed here
-            </div>
+            </section>
         </main>
     )
 }
