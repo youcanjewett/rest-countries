@@ -10,6 +10,46 @@
     padding: 3rem 5rem;
 }
 
+.countries-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 0rem 5rem;
+}
+
+.country-card {
+    width: 16.5rem;
+    height: 21rem;
+}
+
+.country-flag {
+    height: 10rem;
+    width: 100%;
+}
+
+.country-snapshot {
+    display: flex;
+    flex-direction: column;
+    padding: 1.5rem;
+}
+
+.country-name {
+    margin-bottom: 1rem;
+}
+
+.country-stat {
+    display: flex;
+    flex-direction: row;
+}
+
+.stat-name {
+    font-weight: 600;
+}
+
+.stat-value {
+    margin-left: .5rem;
+}
+
 /* mobile styles */
 @media (max-width: 400px) {
     .filter-container {
@@ -17,4 +57,12 @@
         font-size: 0.875rem;
         padding: 1.5rem 1rem;
     }
+
+    .country-container {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    
 }
