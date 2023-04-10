@@ -4,6 +4,7 @@
     background-color: var(--header-color);
     width: 30rem;
     height: 3.5rem;
+    font-weight: 300;
     box-shadow: 0 0 9px -6px var(--box-shadow);
 }
 
@@ -38,7 +39,7 @@ input[type=text] {
 
     .search-icon {
         margin-right: 1.5rem;
-        
+
     }
 
     

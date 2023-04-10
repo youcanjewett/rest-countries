@@ -5,6 +5,7 @@
     --h1-color: hsl(200, 15%, 8%);
     --text-color: hsl(200, 15%, 8%);
     --elements-color: hsl(0, 0%, 100%);
+    --hover-color: hsla(209, 23%, 22%, 0.13);
     --box-shadow: hsla(181, 0%, 63%, 1);
 
 }
@@ -16,6 +17,7 @@
     --h1-color: hsl(0, 0%, 75%);
     --text-color: hsl(0, 0%, 100%);
     --elements-color:  hsl(209, 23%, 22%);
+    --hover-color: hsla(209, 23%, 22%, 0.57);
     --box-shadow: transparent;
 }
 
