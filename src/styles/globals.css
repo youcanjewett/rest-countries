@@ -29,11 +29,14 @@
 
 html {
     font-family: 'Nunito Sans', sans-serif;
-    color: var(--text-color)
+    color: var(--text-color);
+    height: 100%; 
 }
 
 body {
+    height: 100%; 
     font-size: 0.875rem;
+    font-weight: 300;
 }
 
 h1 {

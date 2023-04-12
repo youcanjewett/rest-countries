@@ -1,0 +1,163 @@
+.main-container {
+   
+    background-color: var(--bg-color);
+    height: 100vh;
+    padding: 5rem;
+}
+
+button {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    padding: .625rem 2rem;
+    background-color: var(--elements-color);
+    color: var(--text-color);
+    height: 2.5rem;
+    width: 8.5rem;
+    border: none;
+    border-radius: 0.5rem;
+    box-shadow: 0 0 9px -6px var(--box-shadow);
+}
+
+.back-arrow {
+    padding-right: .5rem;
+    height: 1.5rem;
+    width: 1.5rem;
+}
+
+.country-container {
+    display: flex;
+    flex-direction: row;  
+    margin-top: 5rem;
+}
+
+.flag {
+    width: 35rem;
+    height: 25rem;
+}
+
+.country {
+    display: flex;
+    flex-direction: column;
+    margin-left: 9rem;
+    
+    /* width: 36rem;
+    height: 20rem; */
+
+}
+
+.country-name {
+    font-size: 2rem;
+}
+
+.country-details {
+    display: flex;
+    flex-direction: row;
+    color: var(--text-color)
+}
+
+.details-column {
+    display: flex;
+    flex-direction: column;
+    line-height: 2rem;
+}
+
+.details-column:first-child {
+    margin-right: 7rem;
+}
+
+.details {
+    display: flex;
+    flex-direction: row;
+}
+
+.detail {
+    font-weight: 600;
+    margin-right: 0.5rem;
+}
+
+.border-countries-container {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    margin-top: 4.25rem;
+}
+
+
+.button-group {
+    display: flex;
+    flex-direction: row;
+    margin-left: 1rem;
+}
+
+.border-buttons {
+    width: 6rem;
+    height: 1.75rem;
+    cursor: pointer;
+}
+
+.border-buttons:not(:first-child) {
+    margin-left: .5rem;
+}
+
+
+/* mobile styles */
+@media (max-width: 400px) {
+
+    .main-container {
+        padding: 2.5rem 1.75rem;
+        height: 100%;
+    }
+
+    button {
+        height: 2rem;
+        width: 6.5rem;
+    }
+
+    .country-container {
+        flex-direction: column;
+        align-items:flex-start;
+    }
+
+    .flag {
+        width: 20rem;
+        height: 14.3125rem;
+    }
+
+    .country {
+        margin-left: 0;
+    }
+
+    .country-name {
+        font-size: 1.5rem;
+    }
+
+    .country-details {
+        flex-direction: column;
+    }
+
+    .details-column:first-child {
+        margin-right: 0rem;
+        margin-bottom: 2rem;
+    }
+
+    .border-countries-container{
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: flex-start;
+
+    }
+
+    .border-title {
+        font-size: 1rem;
+    }
+
+    .button-group {
+        margin: 1rem 0rem;
+    }
+
+
+
+    
+}
