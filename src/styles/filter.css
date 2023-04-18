@@ -46,7 +46,7 @@
     display: block;
   }
   
-  .dropdown-content a:hover {
+  .dropdown-content a:hover{
     background-color: var(--hover-color);}
 
     /* mobile styles */

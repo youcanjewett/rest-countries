@@ -1,7 +1,6 @@
 .main-container {
-   
     background-color: var(--bg-color);
-    height: 100vh;
+    height: 100%;
     padding: 5rem;
 }
 
