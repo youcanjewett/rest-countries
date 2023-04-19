@@ -11,6 +11,7 @@ const Countries = () => {
 
     const [countries, setCountries] = useState([]);
     const [filteredCountries, setFilteredCountries] = useState([]);
+    const [searchInput, setSearchInput] = useState("");
 
     useEffect (() => {
 
@@ -27,7 +28,7 @@ const Countries = () => {
         }
         fetchCountries();
 
-    },[]);
+    },[filteredCountries]);
 
     
 
@@ -35,11 +36,17 @@ const Countries = () => {
         
         < >
             <section className="filter-container">
-                <SearchBar />
+                <SearchBar 
+                setSearchInput={setSearchInput}
+                searchInput={searchInput}
+                countries={countries}
+                setFilteredCountries={setFilteredCountries}
+                />
                 <Filter 
                 countries = {countries}
                 setCountries={setCountries}
                 setFilteredCountries={setFilteredCountries}
+                setSearchInput={setSearchInput}
                     />
             </section>
 
