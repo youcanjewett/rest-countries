@@ -57,7 +57,7 @@ const Country = () => {
                     </div>
                     <div className="details">
                       <p className="detail">Population:</p>
-                      <p className="detail-value">{population}</p>
+                      <p className="detail-value">{population.toLocaleString('en')}</p>
                     </div>
                     <div className="details">
                       <p className="detail">Region:</p>
@@ -88,7 +88,7 @@ const Country = () => {
                     </div>
                   </div>
                 </div>
-
+                {borders &&
                 <div className="border-countries-container">
                   <p className="detail border-title">Border Countries:</p>
                   <div className="button-group">
@@ -98,6 +98,7 @@ const Country = () => {
                       );})}
                   </div>
                 </div>
+        }
               </section>
             </article>
           );

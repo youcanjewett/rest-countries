@@ -28,6 +28,14 @@ input[type=search] {
     background-color: transparent;
 }
 
+.error-msg {
+    display: none;
+    color: red;
+    white-space: nowrap;
+    align-items: center;
+    margin-right: 1rem;
+}
+
 /* mobile styles */
 @media (max-width: 400px) {
     .search-bar {
