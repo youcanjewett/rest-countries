@@ -70,5 +70,11 @@ article > img {
         align-items: center;
     }
 
+    .country-grid {
+        display: grid;
+        grid-template-columns: auto;
+        padding: 0 5rem;
+    }
+
     
 }
