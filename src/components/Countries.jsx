@@ -63,7 +63,7 @@ const Countries = () => {
                             
                             <div className="country-stat">
                                 <p className="stat-name">Population:</p>
-                                <p className="stat-value">{population}</p>
+                                <p className="stat-value">{population.toLocaleString("en")}</p>
                             </div>
                             <div className="country-stat">
                                 <p className="stat-name">Region:</p>
@@ -97,7 +97,7 @@ const Countries = () => {
                             
                             <div className="country-stat">
                                 <p className="stat-name">Population:</p>
-                                <p className="stat-value">{population}</p>
+                                <p className="stat-value">{population.toLocaleString("en")}</p>
                             </div>
                             <div className="country-stat">
                                 <p className="stat-name">Region:</p>
