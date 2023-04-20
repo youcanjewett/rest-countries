@@ -59,7 +59,7 @@ const Countries = () => {
 
                         <img src={flag} alt={name} />
                         <div className="country-snapshot">
-                            <h2 className="country-name">{name}</h2>
+                            <h2 className="name">{name}</h2>
                             
                             <div className="country-stat">
                                 <p className="stat-name">Population:</p>
