@@ -1,80 +1,110 @@
-import React from 'react';
-import './../styles/country.css';
+import React, { useState, useEffect } from "react";
+import { Link, useParams } from "react-router-dom";
+import "./../styles/country.css";
 
 const Country = () => {
-    return (
-        <main className="main-container">
-            <button>
-                <img src='arrow-left.svg' className="back-arrow" alt="back arrow"/>
-                Back
-            </button>
+  const [country, setCountry] = useState([]);
+  const { name } = useParams();
 
-            <section className="country-container">
-                <section className="flag">
-                    <img src="#" alt="country flag"/>
-                </section>
+  useEffect(() => {
+    const fetchCountryData = async () => {
+      const response = await fetch(`https://restcountries.com/v2/name/${name}`);
+      const country = await response.json();
+      setCountry(country);
+    };
 
-                <section className="country">
-                    <h2 className="country-name">Belgium</h2>
-                    <div className="country-details">
-                        <div className="details-column">
-                            <div className="details">
-                                <p className="detail">Native Name:</p>
-                                <p className="detail-value">België</p>
-                            </div>
-                            <div className="details">
-                                <p className="detail">Population:</p>
-                                <p className="detail-value">11,319,511</p>
-                            </div>
-                            <div className="details">
-                                <p className="detail">Region:</p>
-                                <p className="detail-value">Europe</p>
-                            </div>
-                            <div className="details">
-                                <p className="detail">Sub Region:</p>
-                                <p className="detail-value">Western Europe</p>
-                            </div>
-                            <div className="details">
-                                <p className="detail">Capital:</p>
-                                <p className="detail-value">Brussels</p>
-                            </div>
-                        </div>
+    fetchCountryData();
+  }, [name]);
 
-                        <div className="details-column">
-                            <div className="details">
-                                <p className="detail">Top Level Domain:</p>
-                                <p className="detail-value">.be</p>
-                            </div>
-                            <div className="details">
-                                <p className="detail">Currencies:</p>
-                                <p className="detail-value">Euro</p>
-                            </div>
-                            <div className="details">
-                                <p className="detail">Languages:</p>
-                                <p className="detail-value">Dutch, French, German</p>
-                            </div>
-                           
+  return (
+    <main className="main-container">
+      <Link to="/countries">
+        <button>
+          <img src="/arrow-left.svg" className="back-arrow" alt="back arrow" />
+          Back
+        </button>
+      </Link>
 
-                        </div>
-                        <div className="details-two">
+      <section >
+        {country.map((info) => {
+          const {
+            numericCode,
+            flag,
+            name,
+            nativeName,
+            population,
+            region,
+            subregion,
+            capital,
+            topLevelDomain,
+            currencies,
+            languages,
+            borders,
+          } = info;
+          return (
+            <article key={numericCode} className="country-container">
+              <section className="flag">
+                <img src={flag} alt="country flag" />
+              </section>
 
-                        </div>
+              <section className="country">
+                <h2 className="country-name">{name}</h2>
+                <div className="country-details">
+                  <div className="details-column">
+                    <div className="details">
+                      <p className="detail">Native Name:</p>
+                      <p className="detail-value">{nativeName}</p>
                     </div>
+                    <div className="details">
+                      <p className="detail">Population:</p>
+                      <p className="detail-value">{population}</p>
+                    </div>
+                    <div className="details">
+                      <p className="detail">Region:</p>
+                      <p className="detail-value">{region}</p>
+                    </div>
+                    <div className="details">
+                      <p className="detail">Sub Region:</p>
+                      <p className="detail-value">{subregion}</p>
+                    </div>
+                    <div className="details">
+                      <p className="detail">Capital:</p>
+                      <p className="detail-value">{capital}</p>
+                    </div>
+                  </div>
+
+                  <div className="details-column">
+                    <div className="details">
+                      <p className="detail">Top Level Domain:</p>
+                      <p className="detail-value">{topLevelDomain}</p>
+                    </div>
+                    <div className="details">
+                      <p className="detail">Currencies:</p>
+                      <p className="detail-value">{currencies[0].name}</p>
+                    </div>
+                    <div className="details">
+                      <p className="detail">Languages:</p>
+                      <p className="detail-value">{languages[0].name}</p>
+                    </div>
+                  </div>
+                </div>
 
                 <div className="border-countries-container">
-                    <p className="detail border-title">Border Countries:</p>
-                    <div className="button-group">
-                        <button className="border-buttons">France</button>
-                        <button className="border-buttons">Germany</button>
-                        <button className="border-buttons">Netherlands</button>
-                    </div>
+                  <p className="detail border-title">Border Countries:</p>
+                  <div className="button-group">
+                     {borders.map((border) => {
+                      return (
+                         <button className="border-buttons" key={border}>{border}</button>
+                      );})}
+                  </div>
                 </div>
-                </section>
-
-
-            </section>
-        </main>
-    )
-}
+              </section>
+            </article>
+          );
+        })}
+      </section>
+    </main>
+  );
+};
 
 export default Country;

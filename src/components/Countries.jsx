@@ -56,9 +56,8 @@ const Countries = () => {
                     const {numericCode, name, flag, population, region, capital} = country
                     
                 return (
-                <Link to={`/${name}`} key={numericCode} >
+                <Link to={`/countries/${name}`} key={numericCode} className="country-link" >
                     <article>
-                        <div className="country-card">
 
                         <img src={flag} alt={name} />
                         <div className="country-snapshot">
@@ -77,7 +76,7 @@ const Countries = () => {
                                 <p className="stat-value">{capital}</p>
                             </div>
                         </div>
-                        </div>
+                        
                     </article>
                 </Link>
                 )
@@ -91,13 +90,12 @@ const Countries = () => {
                     const {numericCode, name, flag, population, region, capital} = country
                     
                 return (
-                <Link to={`/${name}`} key={numericCode} >
+                <Link to={`/countries/${name}`} key={numericCode} className="country-link">
                     <article>
-                        <div className="country-card">
 
                         <img src={flag} alt={name} />
                         <div className="country-snapshot">
-                            <h2 className="country-name">{name}</h2>
+                            <h2 className="name">{name}</h2>
                             
                             <div className="country-stat">
                                 <p className="stat-name">Population:</p>
@@ -111,7 +109,6 @@ const Countries = () => {
                                 <p className="stat-name">Capital:</p>
                                 <p className="stat-value">{capital}</p>
                             </div>
-                        </div>
                         </div>
                     </article>
                 </Link>
