@@ -44,9 +44,7 @@ const Countries = () => {
                 />
                 <Filter 
                 countries = {countries}
-                setCountries={setCountries}
                 setFilteredCountries={setFilteredCountries}
-                setSearchInput={setSearchInput}
                     />
             </section>
 

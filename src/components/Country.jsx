@@ -6,6 +6,8 @@ const Country = () => {
   const [country, setCountry] = useState([]);
   const { name } = useParams();
 
+  
+
   useEffect(() => {
     const fetchCountryData = async () => {
       const response = await fetch(`https://restcountries.com/v2/name/${name}`);
@@ -14,6 +16,8 @@ const Country = () => {
     };
 
     fetchCountryData();
+
+    
   }, [name]);
 
   return (
@@ -25,7 +29,7 @@ const Country = () => {
         </button>
       </Link>
 
-      <section >
+      <section>
         {country.map((info) => {
           const {
             numericCode,
@@ -39,8 +43,10 @@ const Country = () => {
             topLevelDomain,
             currencies,
             languages,
-            borders,
           } = info;
+
+          
+
           return (
             <article key={numericCode} className="country-container">
               <section className="flag">
@@ -57,7 +63,9 @@ const Country = () => {
                     </div>
                     <div className="details">
                       <p className="detail">Population:</p>
-                      <p className="detail-value">{population.toLocaleString('en')}</p>
+                      <p className="detail-value">
+                        {population.toLocaleString("en")}
+                      </p>
                     </div>
                     <div className="details">
                       <p className="detail">Region:</p>
@@ -88,17 +96,7 @@ const Country = () => {
                     </div>
                   </div>
                 </div>
-                {borders &&
-                <div className="border-countries-container">
-                  <p className="detail border-title">Border Countries:</p>
-                  <div className="button-group">
-                     {borders.map((border) => {
-                      return (
-                         <button className="border-buttons" key={border}>{border}</button>
-                      );})}
-                  </div>
-                </div>
-        }
+               
               </section>
             </article>
           );

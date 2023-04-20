@@ -47,7 +47,7 @@ const Filter = ({ countries, setFilteredCountries }) => {
             onChange={(e) => filterRegions(e.target.value)}
             value={regions.name}
         >
-            <option value="Africa">Filter by Region</option>
+            <option value="filter">Filter by Region</option>
             <option value="Africa">Africa</option>
             <option value="Asia">Asia</option>
             <option value="Europe">Europe</option>
