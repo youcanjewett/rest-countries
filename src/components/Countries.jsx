@@ -54,7 +54,7 @@ const Countries = () => {
                     const {numericCode, name, flag, population, region, capital} = country
                     
                 return (
-                <Link to={`/countries/${name}`} key={numericCode} className="country-link" >
+                <Link to={`/${name}`} key={numericCode} className="country-link" >
                     <article>
 
                         <img src={flag} alt={name} />
@@ -88,7 +88,7 @@ const Countries = () => {
                     const {numericCode, name, flag, population, region, capital} = country
                     
                 return (
-                <Link to={`/countries/${name}`} key={numericCode} className="country-link">
+                <Link to={`/${name}`} key={numericCode} className="country-link">
                     <article>
 
                         <img src={flag} alt={name} />

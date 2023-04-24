@@ -22,7 +22,7 @@ const Country = () => {
 
   return (
     <main className="main-container">
-      <Link to="/countries">
+      <Link to="/">
         <button>
           <img src="/arrow-left.svg" className="back-arrow" alt="back arrow" />
           Back
